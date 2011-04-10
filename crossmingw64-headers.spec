@@ -11,6 +11,7 @@ Source0:	mingw64-headers.tar.xz
 # Source0-md5:	42973598fe4b8fbe86f062967e591a91
 URL:		http://mingw-w64.sourceforge.net/
 BuildRequires:	automake
+BuildRequires:	subversion
 AutoReqProv:	no
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
