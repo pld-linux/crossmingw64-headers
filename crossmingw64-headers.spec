@@ -1,14 +1,14 @@
 Summary:	Cross Mingw64 GNU development utilities - headers
 Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw64 - pliki nagłowkowe
 Name:		crossmingw64-headers
-Version:	1.0
-Release:	2
+Version:	2.0
+Release:	0.1
 License:	ZPL v2.1 with parts on Public Domain, BSD and LGPL.
 Group:		Development/Tools
-# svn co https://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/branches/releases/v1.0/mingw-w64-headers mingw64-headers
-%define		_rev	4121
+# svn co https://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/stable/v2.x/mingw-w64-headers mingw64-headers
+%define		_rev	4742
 Source0:	mingw64-headers.tar.xz
-# Source0-md5:	42973598fe4b8fbe86f062967e591a91
+# Source0-md5:	2446851a1222aa6d23ab5d912827d9ae
 URL:		http://mingw-w64.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	subversion
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_enable_debug_packages	0
 
-%define		target		x86_64-pc-mingw32
+%define		target		x86_64-w64-mingw32
 %define		arch		%{_prefix}/%{target}
 
 %description
@@ -52,7 +52,7 @@ cp direct-x/ChangeLog ChangeLog.direct-x-headers
 	--prefix=%{_prefix} \
 	--build=%{_target_platform} \
 	--host=%{target} \
-	--with-sdk=all
+	--enable-sdk=all
 
 %{__make}
 
