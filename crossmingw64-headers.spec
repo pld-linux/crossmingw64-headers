@@ -2,13 +2,13 @@ Summary:	Cross Mingw64 GNU development utilities - headers
 Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw64 - pliki nagłowkowe
 Name:		crossmingw64-headers
 Version:	2.0
-Release:	3
+Release:	4
 License:	ZPL v2.1 with parts on Public Domain, BSD and LGPL.
 Group:		Development/Tools
 # svn co https://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/stable/v2.x/mingw-w64-headers mingw64-headers
-%define		_rev	5377
+%define		_rev	5515
 Source0:	mingw64-headers.tar.xz
-# Source0-md5:	8b75142640919794f75f3a0bec350457
+# Source0-md5:	1268ff4bed4aab11c5604281f7741987
 URL:		http://mingw-w64.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	subversion
