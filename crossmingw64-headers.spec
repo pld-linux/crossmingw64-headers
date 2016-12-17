@@ -45,8 +45,8 @@ svn upgrade
 if [ "`svnversion -n`" != "%{_rev}" ]; then
 	exit 1
 fi
-cp include/ChangeLog ChangeLog.headers
-cp direct-x/ChangeLog ChangeLog.direct-x-headers
+cp -p include/ChangeLog ChangeLog.headers
+cp -p direct-x/ChangeLog ChangeLog.direct-x-headers
 
 %build
 %{__aclocal}
