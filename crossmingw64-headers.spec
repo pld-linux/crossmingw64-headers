@@ -1,8 +1,8 @@
-Summary:	Cross Mingw64 GNU development utilities - headers
-Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla Mingw64 - pliki nagłowkowe
+Summary:	Cross MinGW-W64 GNU development utilities - headers
+Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW-W64 - pliki nagłówkowe
 Name:		crossmingw64-headers
 Version:	2.0
-Release:	8
+Release:	9
 License:	ZPL v2.1 with parts on Public Domain, BSD and LGPL.
 Group:		Development/Tools
 # svn co https://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/stable/v2.x/mingw-w64-headers mingw64-headers
@@ -17,13 +17,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_enable_debug_packages	0
 
-%define		target		x86_64-w64-mingw64
+%define		target		x86_64-w64-mingw32
 %define		arch		%{_prefix}/%{target}
 
 %description
 crossmingw64 is a complete cross-compiling development system for
 building stand-alone Microsoft Windows applications under Linux using
-the Mingw64 build libraries. This includes a binutils, gcc with g++
+the MinGW-W64 build libraries. This includes a binutils, gcc with g++
 and objc, and libstdc++, all cross targeted to x86_64-pc-mingw32,
 along with supporting Win64 libraries in PE32+ format from free
 sources.
@@ -33,7 +33,7 @@ This package contains cross targeted headers for Win64.
 %description -l pl.UTF-8
 crossmingw64 jest kompletnym systemem do skrośnej kompilacji,
 pozwalającym budować aplikacje MS Windows pod Linuksem używając
-bibliotek mingw64. System składa się z binutils, gcc z g++ i objc,
+bibliotek MinGW-W64. System składa się z binutils, gcc z g++ i objc,
 libstdc++ - wszystkie generujące kod dla platformy x86_64-pc-mingw32,
 oraz z bibliotek w formacie PE32+.
 
