@@ -2,13 +2,14 @@ Summary:	Cross MinGW-W64 GNU development utilities - headers
 Summary(pl.UTF-8):	Skrośne narzędzia programistyczne GNU dla MinGW-W64 - pliki nagłówkowe
 Name:		crossmingw64-headers
 Version:	2.0
-Release:	9
+Release:	10
 License:	ZPL v2.1 with parts on Public Domain, BSD and LGPL.
 Group:		Development/Tools
 # svn co https://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/stable/v2.x/mingw-w64-headers mingw64-headers
 %define		_rev	5515
 Source0:	mingw64-headers.tar.xz
 # Source0-md5:	1268ff4bed4aab11c5604281f7741987
+Patch0:		%{name}-stddef-max_align_t.patch
 URL:		http://mingw-w64.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	subversion
@@ -45,6 +46,7 @@ svn upgrade
 if [ "`svnversion -n`" != "%{_rev}" ]; then
 	exit 1
 fi
+%patch0 -p1
 cp -p include/ChangeLog ChangeLog.headers
 cp -p direct-x/ChangeLog ChangeLog.direct-x-headers
 
