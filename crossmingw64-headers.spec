@@ -19,7 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_enable_debug_packages	0
 
 %define		target		x86_64-w64-mingw32
-%define		arch		%{_prefix}/%{target}
+%define		archprefix	%{_prefix}/%{target}
+%define		archincludedir	%{archprefix}/include
 
 %description
 crossmingw64 is a complete cross-compiling development system for
@@ -74,4 +75,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog ChangeLog.direct-x-headers ChangeLog.headers
-%{arch}/include
+%{archincludedir}
