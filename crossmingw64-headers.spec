@@ -47,7 +47,7 @@ svn upgrade
 if [ "`svnversion -n`" != "%{_rev}" ]; then
 	exit 1
 fi
-%patch0 -p1
+%patch -P0 -p1
 cp -p include/ChangeLog ChangeLog.headers
 cp -p direct-x/ChangeLog ChangeLog.direct-x-headers
 
